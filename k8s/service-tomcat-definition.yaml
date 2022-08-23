@@ -1,0 +1,17 @@
+apiVersion:  v1
+kind:  Service
+metadata:
+  name:  myapps-tomcat-service
+  labels:
+    app:  service-app
+    tier: front-end
+spec:
+  type:  NodePort
+  ports:
+    - targetPort:  80
+      port:  80
+      nodePort: 30013
+      protocol: TCP
+  selector:
+     app:  myapp
+     tier:  front-end

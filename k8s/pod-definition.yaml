@@ -1,0 +1,11 @@
+apiVersion: v1
+kind:  Pod
+metadata:
+  name:  myapp-tomcat-pod
+  labels:
+       app:  myapp
+       tier: front-end
+spec:
+  containers:
+     - name: tomcat-container
+       image: reshmap/tomcat-myapp:latest
